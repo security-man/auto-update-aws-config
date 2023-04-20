@@ -1,4 +1,4 @@
-# auto-update-config
+# auto-update-aws-config
 Automatically updates your local AWS config file with the current AWS organisations account data, based on user-specified IAM roles to create AWS profiles.
 
 ## Installation
