@@ -1,0 +1,26 @@
+name: Trufflehog Monthly Deep Scan
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+    
+    # This scan will run on the last day of every month
+    
+  push:
+    branches: [main]
+
+jobs:
+  trufflehog-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install Trufflehog-latest
+        run: |
+          pip3 install trufflehog
+      - name: Run Trufflehog Monthly Deep Scan
+        
+        # Configure the correct git url of the repo to be scanned
+        run: |
+          trufflehog https://github.com/security-man/auto-update-aws-config.git --regex --entropy=FALSE
+           
