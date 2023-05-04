@@ -7,7 +7,7 @@ on:
     # This scan will run on the last day of every month
     
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   trufflehog-scan:
