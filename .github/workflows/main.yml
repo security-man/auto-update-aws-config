@@ -22,4 +22,4 @@ jobs:
         
         # Configure the correct git url of the repo to be scanned
         run: |
-          trufflehog git https://github.com/security-man/auto-update-aws-config.git
+          trufflehog git_url https://github.com/security-man/auto-update-aws-config.git
