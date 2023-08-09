@@ -2,7 +2,7 @@
 Automatically updates your local AWS config file with the current AWS organisations account data, based on user-specified IAM roles to create AWS profiles.
 
 ## Installation
-Simply copy the python script to your local .aws directory and execute! If in doubt, save a copy of your .aws/config file before executing to revert back to.
+Simply copy the python script to your local directory and execute! This script will attempt to modify your ~/.aws/config file. If you are a windows user or your AWS config file is located elsewhere, please update this static reference (line 9) accordingly.
 
 ```bash
 python3 auto-update-config.py
