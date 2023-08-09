@@ -2,13 +2,14 @@ import boto3
 import botocore
 import time
 import json
+import os
 
 # take user input for iam roles to add to config
 iam_role_string = input('Enter comma-separated list of IAM roles to add: ')
 iam_role_list = iam_role_string.split(",")
 
 # open file in write mode
-f = open('config', 'w')
+f = open(os.path.expanduser('~/.aws/config'), 'w')
 
 # establish client with root account (default profile)
 session = boto3.Session(profile_name="default")
