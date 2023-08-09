@@ -1,7 +1,4 @@
 import boto3
-import botocore
-import time
-import json
 import os
 
 # take user input for iam roles to add to config
