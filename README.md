@@ -5,7 +5,7 @@ Automatically updates your local AWS config file with the current AWS organisati
 Simply copy the python script to your local directory and execute! This script will attempt to modify your ~/.aws/config file. If you are a windows user or your AWS config file is located elsewhere, please update this static reference (line 9) accordingly.
 
 ```bash
-python3 auto-update-config.py
+python3 auto_update_aws_config.py
 ```
 
 ## User Inputs
