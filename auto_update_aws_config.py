@@ -20,11 +20,14 @@ page_iterator = paginator.paginate()
 # get accounts ids for active accounts
 account_ids = []
 account_names = []
+account_name_sanitised = ""
 for page in page_iterator:
     for account in page['Accounts']:
         if account['Status'] == 'ACTIVE':
             account_ids += {account['Id']}
-            account_names += {account['Name']}
+            account_name_sanitised = account['Name']
+            account_name_sanitised = ''.join(account_name_sanitised.split())
+            account_names += {account_name_sanitised}
 
 # write default config entry
 f.write("[default]\nregion = eu-west-2\noutput = json\n")
